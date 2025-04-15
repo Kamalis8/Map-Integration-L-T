@@ -14,6 +14,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+
 target 'Map_view_sample' do
   config = use_native_modules!
 
@@ -22,6 +23,8 @@ target 'Map_view_sample' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+
+  pod 'GoogleMaps'
 
   target 'Map_view_sampleTests' do
     inherit! :complete
